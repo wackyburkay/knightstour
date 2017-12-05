@@ -44,7 +44,7 @@ def h2_eval(cpos, cpath, s):
     # between them and nearest corner.
     for x in temp:
         reachable.append(len(get_available_pos(x, cpath + [x], s)))
-        dist.append(min([math.sqrt(x[0]**2 + x[1]**2), math.sqrt(x[0]**2 + (4-x[1])**2), math.sqrt((4-x[0])**2 + x[1]**2), math.sqrt((4-x[0])**2 + (4-x[1])**2)]))
+        dist.append(min([math.sqrt(x[0]**2 + x[1]**2), math.sqrt(x[0]**2 + ((s-1)-x[1])**2), math.sqrt(((s-1)-x[0])**2 + x[1]**2), math.sqrt(((s-1)-x[0])**2 + ((s-1)-x[1])**2)]))
 
     preresult = []
 
